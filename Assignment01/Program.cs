@@ -1,54 +1,18 @@
-﻿namespace Assignment01
+﻿using System.ComponentModel.Design;
+
+namespace Assignment01
 {
     internal class Program
     {
-         enum WeekDays
-        {
-            Monday,
-            Tuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday
-
-        }
-
-        enum Seasons
-        {
-            Spring,
-            Summer,
-            Autumn,
-            Winter
-        }
-
-        [Flags]
-        enum Permissions
-        {
-            Read = 1,
-            Write = 2,
-            Delete = 4,
-            Execute = 8
-        }
-
-        enum Colors
-        {
-            Red,
-            Green,
-            Blue
-        }
         static void Main(string[] args)
         {
             #region Q1
             //Console.WriteLine("Days of the Week:");
-            //for (int i = (int)WeekDays.Monday; i <= (int)WeekDays.Sunday; i++)
-            //{
-            //    Console.WriteLine((WeekDays)i);
-            //}
+            //for (int i = (int)WeekDays.Monday; i <= (int)WeekDays.Sunday; i++)Console.WriteLine((WeekDays)i);
             #endregion
 
             #region Q2
-            //Console.WriteLine("Enter a season name: ");
+            //Console.Write("Enter a season name: ");
             //string input = Console.ReadLine();
             //switch (input)
             //{
@@ -71,27 +35,36 @@
             #endregion
 
             #region Q3
-            //Permissions Permission = (Permissions)3;
-            //Permission ^= Permissions.Delete; 
-            //Console.WriteLine("Permissions after adding Delete: " + Permission);
-            //Permission ^= Permissions.Read;
-            //Console.WriteLine("Permissions after removing Read: " + Permission);
-            //if((Permission & Permissions.Write) == Permissions.Write)Console.WriteLine("Yes..Write Permission exist");
-            //else Console.WriteLine("NO..Write Permission does't exist");
+            //Permissions permission = (Permissions)3;
+            //permission ^= Permissions.Delete;
+            //Console.WriteLine("Permissions after adding it: " + permission);
+            //permission ^= Permissions.Write;
+            //Console.WriteLine("Permissions after removing it: " + permission);
+            //if ((permission & Permissions.Read) == Permissions.Read)Console.WriteLine("Yes..The permission exist");
+            // else Console.WriteLine("NO..The Permission does't exist");
             #endregion
 
             #region Q4
-            //Console.WriteLine("Enter a color name:");
+            //Console.Write("Enter a Color name: ");
             //string input = Console.ReadLine();
-            //if (Enum.TryParse(input, out Colors color))
+            //switch (input)
             //{
-            //    if (color == Colors.Blue || color == Colors.Red || color == Colors.Green)
-            //        Console.WriteLine(color + " is a primary color.");
-            //}
-            //else Console.WriteLine(input + " isn't a primary color.");
-            #endregion
+            //    case "Red":
+            //        Console.WriteLine($"{input} color is a primary color");
+            //        break;
+            //    case "Green":
+            //        Console.WriteLine($"{input} color is a primary color");
+            //        break;
+            //    case "Blue":
+            //        Console.WriteLine($"{input} color is a primary color");
+            //        break;
+            //    default:
+            //        Console.WriteLine($"{input} isn't a primary color.");
+            //        break;
+                    #endregion
+
+            }
+
         }
-
     }
-
 }
